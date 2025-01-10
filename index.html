@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body class="bold-font">
+    <div class="container">
+        <div class="dialog"> 
+            <form>
+                <label>Entrez la taches</label>
+                <div>
+                    <input class="value-add" type="text">
+                    <button class="button-add" type="submit">Ajouter</button>
+                </div>
+            </form>
+        </div>
+        <div id="no-dialog">
+            <h6>Vous avez <span id="pluralText"></span></h6S>
+                <div class="app">
+                    <div class="options">
+                        <button id="tache-a-faire" class="button-filter">Tâches à faire</button>
+                        <button id="tache-terminee" class="button-filter">Tâches terminées</button>
+                        <button id="add-tache" type="button" class="button button-filter">
+                            <span class="button__text">Add Task</span>
+                            <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+                                    stroke="currentColor" height="24" fill="none" class="svg">
+                                    <line y2="19" y1="5" x2="12" x1="12"></line>
+                                    <line y2="12" y1="12" x2="19" x1="5"></line>
+                                </svg></span>
+                        </button>
+                    </div>
+                    <div class="section">
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+
+</html>

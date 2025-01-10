@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --background-color: #FFFFFF;
+    --text-color: #4F48EC;
+    --external-color: #100E34;
+    --main-focus: #2d8cf0;
+    --font-color: #dedede;
+    --bg-color-sub: #222;
+    --bg-color: #323232;
+    --main-color: #dedede;
+    /* --background-color: #E95354; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.button {
+
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.button,
+.button__icon,
+.button__text {
+    transition: all 0.3s;
+}
+
+.button .button__text {
+    transform: translateX(25px);
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: var(--bg-color-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button .svg {
+    width: 20px;
+    stroke: var(--main-color);
+}
+
+.button:hover {
+    background: var(--bg-color);
+}
+
+.button:hover .button__text {
+    color: transparent;
+}
+
+.button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+}
+
+.button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.normal-font {
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 472;
+}
+
+.bold-font {
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+body {
+    height: 100dvh;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+    width: 450px;
+    overflow: hidden;
+    height: 450px;
+    position: relative;
+    border: #100E34 solid;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    color: white;
+}
+
+.options>button:not(:last-child) {
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 5px;
+    transition: all ease-in-out .2s;
+    color: white;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+}
+
+.options>button:not(:last-child):hover {
+    transform: scale(1.05);
+}
+
+.options>button:not(:last-child):active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+}
+
+.section {
+    margin-top: 10px;
+    height: 300px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.section>.task-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #222;
+    height: 50px;
+}
+
+.task-section>label {
+    overflow-x: scroll;
+    font-weight: 400;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+.task-section>input {
+    cursor: pointer;
+}
+
+
+.dialog {
+    position: absolute;
+    background-color: white;
+    shape-image-threshold: black 1px 1px 1px;
+    width: 80%;
+    height: 35%;
+    margin: auto;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    z-index: 5;
+    display: none;
+    border: solid black 1px;
+}
+
+.dialog>form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    font-size: 25px;
+}
+
+.dialog>form>label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dialog>form>div {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+}
+.dialog>form>div>input{
+    padding: 7px;
+    border-radius: 7px;
+    border: solid grey 2px;
+}
+
+.dialog>form>div>button {
+
+    background-color: #2d8cf0;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 5px;
+    transition: all ease-in-out .2s;
+    color: white;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+}
+
+.dialog>form>div>button:hover {
+    transform: scale(1.05);
+}
+
+.dialog>form>div>button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+}
